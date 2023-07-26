@@ -13,6 +13,46 @@ if(empty($routes)) {
     return;
 }
 
-if(count($routes) == 1 && isset($_SERVER['REQUEST_METHOD'])) {
-    echo '<pre>'; print_r($_SERVER['REQUEST_METHOD']); echo '</pre>';
+// Peticiones
+
+$request = $_SERVER['REQUEST_METHOD'];
+
+if(count($routes) == 1 && isset($request)) {
+    // GET
+    if($request == "GET") {
+        $json = array(
+            'status' => 200,
+            'result' => 'Solicitud GET'
+        );
+        
+        echo json_encode($json, http_response_code($json["status"]));
+        return;
+    // POST
+    } else if ($request == "POST") {
+        $json = array(
+            'status' => 200,
+            'result' => 'Solicitud POST'
+        );
+        
+        echo json_encode($json, http_response_code($json["status"]));
+        return;
+    // PUT
+    } else if ($request == "PUT") {
+        $json = array(
+            'status' => 200,
+            'result' => 'Solicitud PUT'
+        );
+        
+        echo json_encode($json, http_response_code($json["status"]));
+        return;
+    // DELETE
+    } else if ($request == "DELETE") {
+        $json = array(
+            'status' => 200,
+            'result' => 'Solicitud DELETE'
+        );
+        
+        echo json_encode($json, http_response_code($json["status"]));
+        return;
+    }
 }
