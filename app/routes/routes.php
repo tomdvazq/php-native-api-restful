@@ -9,7 +9,7 @@ if(empty($routes)) {
         'result' => 'No se ha encontrado la ruta'
     );
     
-    echo json_encode($json);
+    echo json_encode($json, http_response_code($json["status"]));
     return;
 }
 
