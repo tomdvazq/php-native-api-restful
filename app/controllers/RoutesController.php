@@ -1,9 +1,9 @@
 <?php
 
-class RoutesControllers {
+class RoutesController {
 
     public function index() {
-        include "../routes/Routes.php";
+        include "./app/routes/routes.php";
     }
 
 }
