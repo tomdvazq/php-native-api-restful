@@ -1,3 +1,9 @@
 <?php
 
-echo('Soy una API');
+$json = array(
+    'status' => 200,
+    'result' => 'success'
+);
+
+echo json_encode($json);
+return;
