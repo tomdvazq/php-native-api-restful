@@ -6,8 +6,13 @@ class GetModel {
 
     // Peticiones GET sin filtro 
 
-    static public function getData($table, $select) {
+    static public function getData($table, $select, $orderBy, $orderMode) {
         $sql = "SELECT $select FROM $table";
+
+        if ($orderBy != null && $orderMode != null) {
+            $sql = "SELECT $select FROM $table ORDER BY $orderBy $orderMode";
+        }
+
         $stmt = Connection::connect()->prepare($sql);
         $stmt -> execute();
         return $stmt -> fetchAll(PDO::FETCH_CLASS); 
@@ -15,7 +20,7 @@ class GetModel {
 
     // Peticiones GET con filtro
 
-    static public function getDataFilter($table, $select, $linkTo, $equalTo) {
+    static public function getDataFilter($table, $select, $linkTo, $equalTo, $orderBy, $orderMode) { 
 
         $linkToArray = explode(",", $linkTo);
         $equalToArray = explode("_", $equalTo);
@@ -30,6 +35,10 @@ class GetModel {
         }
     
         $sql = "SELECT $select FROM $table WHERE $linkToArray[0] = :$linkToArray[0] $linkToText";
+
+        if ($orderBy != null && $orderMode != null) {
+            $sql = "SELECT $select FROM $table WHERE $linkToArray[0] = :$linkToArray[0] $linkToText ORDER BY $orderBy $orderMode";
+        }
     
         $stmt = Connection::connect()->prepare($sql);
     
