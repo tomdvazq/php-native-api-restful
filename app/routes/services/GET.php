@@ -2,7 +2,8 @@
 
 require_once "./app/controllers/GetController.php";
 
-$table = $routes[1];
+$table = explode("?", $routes[1])[0];
+$select = $_GET["select"] ?? "*";
 
 $response = new GetController();
-$response -> getData($table);
+$response -> getData($table, $select);

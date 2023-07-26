@@ -89,3 +89,237 @@ Stack trace:
 #2 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
 #3 {main}
   thrown in C:\xampp\htdocs\php_apirest\app\routes\services\GET.php on line 3
+[26-Jul-2023 20:04:57 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM categories?select=*' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:10
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(10): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData('categories?sele...', '')
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(9): GetController::getData('categories?sele...', '')
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 10
+[26-Jul-2023 20:05:22 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM categories?select=%22*%22' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:10
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(10): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData('categories?sele...', '')
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(9): GetController::getData('categories?sele...', '')
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 10
+[26-Jul-2023 20:05:25 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM categories?select=*' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:10
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(10): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData('categories?sele...', '')
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(9): GetController::getData('categories?sele...', '')
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 10
+[26-Jul-2023 20:06:07 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM categories' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:10
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(10): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData('categories', '')
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(9): GetController::getData('categories', '')
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 10
+[26-Jul-2023 20:06:11 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM categories?select=*' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:10
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(10): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData('categories?sele...', '')
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(9): GetController::getData('categories?sele...', '')
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 10
+[26-Jul-2023 20:06:17 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM categories?select=id_categories' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:10
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(10): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData('categories?sele...', '')
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(9): GetController::getData('categories?sele...', '')
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 10
+[26-Jul-2023 20:07:35 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM categories' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:10
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(10): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData('categories', '')
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(9): GetController::getData('categories', '')
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 10
+[26-Jul-2023 20:07:39 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM categories?select=*' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:10
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(10): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData('categories?sele...', '')
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(9): GetController::getData('categories?sele...', '')
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 10
+[26-Jul-2023 20:10:29 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 8
+[26-Jul-2023 20:10:29 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'php_apirest.array' doesn't exist in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:10
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(10): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData(Array, '*')
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(9): GetController::getData(Array, '*')
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 10
+[26-Jul-2023 20:10:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 8
+[26-Jul-2023 20:10:31 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM Array' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:10
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(10): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData(Array, '')
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(9): GetController::getData(Array, '')
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 10
+[26-Jul-2023 20:10:41 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 8
+[26-Jul-2023 20:10:41 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'php_apirest.array' doesn't exist in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:10
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(10): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData(Array, 'id_category')
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(9): GetController::getData(Array, 'id_category')
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 10
+[26-Jul-2023 20:11:51 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?select=id_category' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:10
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(10): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData('categories?sele...', 'id_category')
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(9): GetController::getData('categories?sele...', 'id_category')
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 10
+[26-Jul-2023 20:15:20 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 8
+[26-Jul-2023 20:15:20 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'php_apirest.array' doesn't exist in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:10
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(10): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData(Array, '*')
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(9): GetController::getData(Array, '*')
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 10
+[26-Jul-2023 20:17:36 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'favicon.ico' doesn't exist in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:10
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(10): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData('favicon.ico', '*')
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(9): GetController::getData('favicon.ico', '*')
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 10
+[26-Jul-2023 20:17:40 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'favicon.ico' doesn't exist in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:10
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(10): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData('favicon.ico', '*')
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(9): GetController::getData('favicon.ico', '*')
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 10
+[26-Jul-2023 20:17:45 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM categories' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:10
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(10): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData('categories', '')
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(9): GetController::getData('categories', '')
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 10
+[26-Jul-2023 20:17:45 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'favicon.ico' doesn't exist in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:10
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(10): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData('favicon.ico', '*')
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(9): GetController::getData('favicon.ico', '*')
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 10
+[26-Jul-2023 20:17:48 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'favicon.ico' doesn't exist in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:10
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(10): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData('favicon.ico', '*')
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(9): GetController::getData('favicon.ico', '*')
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 10
+[26-Jul-2023 20:18:01 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM categories' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:10
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(10): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData('categories', '')
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(9): GetController::getData('categories', '')
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 10
+[26-Jul-2023 20:18:01 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'favicon.ico' doesn't exist in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:10
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(10): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData('favicon.ico', '*')
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(9): GetController::getData('favicon.ico', '*')
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 10
+[26-Jul-2023 20:18:05 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM categories' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:10
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(10): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData('categories', '')
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(9): GetController::getData('categories', '')
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 10
+[26-Jul-2023 20:18:05 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'favicon.ico' doesn't exist in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:10
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(10): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData('favicon.ico', '*')
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(9): GetController::getData('favicon.ico', '*')
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 10
+[26-Jul-2023 20:18:09 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'favicon.ico' doesn't exist in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:10
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(10): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData('favicon.ico', '*')
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(9): GetController::getData('favicon.ico', '*')
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 10
