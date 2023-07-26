@@ -12,6 +12,12 @@ class GetController {
 
     }
 
+    static public function getDataFilter($table, $select, $linkTo, $equalTo) {
+        $response = GetModel::getDataFilter($table, $select, $linkTo, $equalTo);
+        $return = new GetController();
+        $return -> fncResponse($response);
+    }
+
     public function fncResponse($response) {
         if(!empty($response)) {
             $json = array(
