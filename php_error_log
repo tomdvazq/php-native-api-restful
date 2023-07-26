@@ -507,3 +507,43 @@ Stack trace:
 #5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
 #6 {main}
   thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 12
+[26-Jul-2023 21:39:53 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:49
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(49): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(16): GetModel::getDataFilter('categories', '*', '', '', 'name_category', 'DESC')
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(18): GetController::getDataFilter('categories', '*', '', '', 'name_category', 'DESC')
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 49
+[26-Jul-2023 21:43:24 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM categories' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:17
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(17): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData('categories', '', NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(22): GetController::getData('categories', '', NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 17
+[26-Jul-2023 21:47:12 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:49
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(49): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(16): GetModel::getDataFilter('categories', '*', 'name_category, ...', 'Guitars_2', NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(18): GetController::getDataFilter('categories', '*', 'name_category, ...', 'Guitars_2', NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 49
+[26-Jul-2023 21:47:14 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:49
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(49): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(16): GetModel::getDataFilter('categories', '*', 'name_category, ...', 'Guitars_1', NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(18): GetController::getDataFilter('categories', '*', 'name_category, ...', 'Guitars_1', NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 49

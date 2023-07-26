@@ -6,7 +6,7 @@ class GetModel {
 
     // Peticiones GET sin filtro 
 
-    static public function getData($table, $select, $orderBy, $orderMode) {
+    static public function getData($table, $select, $orderBy, $orderMode, $startAt, $endAt) {
         $sql = "SELECT $select FROM $table";
 
         if ($orderBy != null && $orderMode != null) {
@@ -20,7 +20,7 @@ class GetModel {
 
     // Peticiones GET con filtro
 
-    static public function getDataFilter($table, $select, $linkTo, $equalTo, $orderBy, $orderMode) { 
+    static public function getDataFilter($table, $select, $linkTo, $equalTo, $orderBy, $orderMode, $startAt, $endAt) { 
 
         $linkToArray = explode(",", $linkTo);
         $equalToArray = explode("_", $equalTo);

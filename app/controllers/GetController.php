@@ -4,16 +4,16 @@ require_once "./app/models/GetModel.php";
 
 class GetController {
 
-    static public function getData($table, $select, $orderBy, $orderMode) {
+    static public function getData($table, $select, $orderBy, $orderMode, $startAt, $endAt) {
 
-        $response = GetModel::getData($table, $select, $orderBy, $orderMode);
+        $response = GetModel::getData($table, $select, $orderBy, $orderMode, $startAt, $endAt);
         $return = new GetController();
         $return -> fncResponse($response);
 
     }
 
-    static public function getDataFilter($table, $select, $linkTo, $equalTo, $orderBy, $orderMode) {
-        $response = GetModel::getDataFilter($table, $select, $linkTo, $equalTo, $orderBy, $orderMode);
+    static public function getDataFilter($table, $select, $linkTo, $equalTo, $orderBy, $orderMode, $startAt, $endAt) {
+        $response = GetModel::getDataFilter($table, $select, $linkTo, $equalTo, $orderBy, $orderMode, $startAt, $endAt);
         $return = new GetController();
         $return -> fncResponse($response);
     }
