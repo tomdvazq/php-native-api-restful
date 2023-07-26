@@ -7,11 +7,12 @@ class GetController {
     static public function getData($table) {
 
         $response = GetModel::getData($table);
-        return $response;
+        $return = new GetController();
+        $return -> fncResponse($response);
 
     }
 
-    public function fncResponse() {
+    public function fncResponse($response) {
         if(!empty($response)) {
             $json = array(
                 'status' => 200,
@@ -21,11 +22,9 @@ class GetController {
         } else {
             $json = array(
                 'status' => 404,
-                'result' => 'Información no encontrada'
+                'result' => 'Información no'
             );
         }
-        
         echo json_encode($json, http_response_code($json["status"]));
-        return;
     }
 }
