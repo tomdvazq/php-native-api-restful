@@ -20,13 +20,7 @@ $request = $_SERVER['REQUEST_METHOD'];
 if(count($routes) == 1 && isset($request)) {
     // GET
     if($request == "GET") {
-        $json = array(
-            'status' => 200,
-            'result' => 'Solicitud GET'
-        );
-        
-        echo json_encode($json, http_response_code($json["status"]));
-        return;
+        include 'services/GET.php';
     // POST
     } else if ($request == "POST") {
         $json = array(
