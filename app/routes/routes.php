@@ -13,3 +13,6 @@ if(empty($routes)) {
     return;
 }
 
+if(count($routes) == 1 && isset($_SERVER['REQUEST_METHOD'])) {
+    echo '<pre>'; print_r($_SERVER['REQUEST_METHOD']); echo '</pre>';
+}
