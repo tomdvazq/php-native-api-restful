@@ -547,3 +547,6 @@ Stack trace:
 #5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
 #6 {main}
   thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 49
+[26-Jul-2023 22:12:10 Europe/Berlin] PHP Parse error:  Unclosed '{' on line 5 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 75
+[26-Jul-2023 22:12:19 Europe/Berlin] PHP Parse error:  Unclosed '{' on line 5 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 75
+[26-Jul-2023 22:12:23 Europe/Berlin] PHP Parse error:  Unclosed '{' on line 5 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 75
