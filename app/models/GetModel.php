@@ -20,26 +20,27 @@ class GetModel {
         $linkToArray = explode(",", $linkTo);
         $equalToArray = explode("_", $equalTo);
         $linkToText = "";
-
-        if(count($linkToArray) > 1) {
-            foreach($linkToArray as $key => $value) {
+    
+        if (count($linkToArray) > 1) {
+            foreach ($linkToArray as $key => $value) {
                 if ($key > 0) {
-                    $linkToText .= "AND " . $value . "=" . $value;
+                    $linkToText .= "AND " . $value . " = :" . $value . " ";
                 }
             }
         }
-
+    
         $sql = "SELECT $select FROM $table WHERE $linkToArray[0] = :$linkToArray[0] $linkToText";
-
+    
         $stmt = Connection::connect()->prepare($sql);
-
-        foreach($linkToArray as $key => $value) {
-            $stmt -> bindParam(":".$value, $equalToArray[$key], PDO::PARAM_STR);
+    
+        foreach ($linkToArray as $key => $value) {
+            $stmt->bindParam(":" . $value, $equalToArray[$key], PDO::PARAM_STR);
         }
-
-        $stmt -> execute();
-
-        return $stmt -> fetchAll(PDO::FETCH_CLASS); 
+    
+        $stmt->execute();
+    
+        return $stmt->fetchAll(PDO::FETCH_CLASS);
     }
+    
 
 }

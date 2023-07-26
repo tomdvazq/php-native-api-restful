@@ -363,3 +363,43 @@ Stack trace:
 #5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
 #6 {main}
   thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 40
+[26-Jul-2023 20:51:37 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:40
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(40): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(16): GetModel::getDataFilter('categories', '*', 'name_category,i...', 'Guitars')
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(16): GetController::getDataFilter('categories', '*', 'name_category,i...', 'Guitars')
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 40
+[26-Jul-2023 20:51:40 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:40
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(40): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(16): GetModel::getDataFilter('categories', '*', 'name_category,i...', 'Guitars_1')
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(16): GetController::getDataFilter('categories', '*', 'name_category,i...', 'Guitars_1')
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 40
+[26-Jul-2023 20:51:41 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:40
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(40): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(16): GetModel::getDataFilter('categories', '*', 'name_category,i...', 'Guitars_2')
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(16): GetController::getDataFilter('categories', '*', 'name_category,i...', 'Guitars_2')
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 40
+[26-Jul-2023 20:51:41 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:40
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(40): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(16): GetModel::getDataFilter('categories', '*', 'name_category,i...', 'Guitars_1')
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(16): GetController::getDataFilter('categories', '*', 'name_category,i...', 'Guitars_1')
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 40
