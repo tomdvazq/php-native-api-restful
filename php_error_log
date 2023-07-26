@@ -1,0 +1,52 @@
+[26-Jul-2023 17:20:42 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GetController" not found in C:\xampp\htdocs\php_apirest\app\routes\services\GET.php:5
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\routes\services\GET.php on line 5
+[26-Jul-2023 17:21:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GetController" not found in C:\xampp\htdocs\php_apirest\app\routes\services\GET.php:5
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\routes\services\GET.php on line 5
+[26-Jul-2023 17:21:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GetController" not found in C:\xampp\htdocs\php_apirest\app\routes\services\GET.php:5
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\routes\services\GET.php on line 5
+[26-Jul-2023 17:21:24 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GetController" not found in C:\xampp\htdocs\php_apirest\app\routes\services\GET.php:5
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\routes\services\GET.php on line 5
+[26-Jul-2023 17:21:44 Europe/Berlin] PHP Warning:  The use statement with non-compound name 'GetController' has no effect in C:\xampp\htdocs\php_apirest\app\routes\services\GET.php on line 3
+[26-Jul-2023 17:21:44 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GetController" not found in C:\xampp\htdocs\php_apirest\app\routes\services\GET.php:7
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\routes\services\GET.php on line 7
+[26-Jul-2023 17:23:26 Europe/Berlin] PHP Warning:  require_once(../../controllers/GetController.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\php_apirest\app\routes\services\GET.php on line 3
+[26-Jul-2023 17:23:26 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required '../../controllers/GetController.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\php_apirest\app\routes\services\GET.php:3
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\routes\services\GET.php on line 3
+[26-Jul-2023 17:23:38 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GetModel" not found in C:\xampp\htdocs\php_apirest\app\controllers\GetController.php:7
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(7): GetController::getData('categories')
+#1 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\controllers\GetController.php on line 7
