@@ -17,6 +17,14 @@ class GetController {
         $return = new GetController();
         $return -> fncResponse($response);
     }
+    
+    static public function getRelData($rel, $type, $select, $orderBy, $orderMode, $startAt, $endAt) {
+
+        $response = GetModel::getRelData($rel, $type, $select, $orderBy, $orderMode, $startAt, $endAt);
+        $return = new GetController();
+        $return -> fncResponse($response);
+    }
+
 
     public function fncResponse($response) {
         if(!empty($response)) {

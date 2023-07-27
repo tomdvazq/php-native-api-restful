@@ -8,6 +8,8 @@ $orderBy = $_GET["orderBy"] ?? null;
 $orderMode = $_GET["orderMode"] ?? null;
 $startAt = $_GET["startAt"] ?? null;
 $endAt = $_GET["endAt"] ?? null;
+$rel = isset($_GET["rel"]);
+$type = isset($_GET["type"]);
 
 $response = new GetController();
 
@@ -19,6 +21,10 @@ $equalTo = $_GET["equalTo"] ?? null;
 if(isset($linkTo) && isset($equalTo)) {
     $response -> getDataFilter($table, $select, $linkTo, $equalTo, $orderBy, $orderMode, $startAt, $endAt);
 } 
+//Peticiones GET sin filtro entre tablas relacionadas
+else if($rel && $type && $table == "relations" && !$linkTo && !$equalTo) {
+    $response -> getRelData($rel, $type, $select, $orderBy, $orderMode, $startAt, $endAt);
+}
 // Petición GET sin filtro
 else {
     $response -> getData($table, $select, $orderBy, $orderMode, $startAt, $endAt);

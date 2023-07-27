@@ -550,3 +550,27 @@ Stack trace:
 [26-Jul-2023 22:12:10 Europe/Berlin] PHP Parse error:  Unclosed '{' on line 5 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 75
 [26-Jul-2023 22:12:19 Europe/Berlin] PHP Parse error:  Unclosed '{' on line 5 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 75
 [26-Jul-2023 22:12:23 Europe/Berlin] PHP Parse error:  Unclosed '{' on line 5 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 75
+[27-Jul-2023 02:22:26 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'favicon.ico' doesn't exist in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:28
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(28): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData('favicon.ico', '*', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(24): GetController::getData('favicon.ico', '*', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 28
+[27-Jul-2023 20:16:58 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 94
+[27-Jul-2023 20:16:58 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 94
+[27-Jul-2023 20:16:58 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 94
+[27-Jul-2023 20:16:58 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 94
+[27-Jul-2023 20:16:58 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '1 INNER JOIN  ON 1.id_.1 = .id_' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:112
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(112): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(23): GetModel::getRelData(true, true, '*', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(26): GetController::getRelData(true, true, '*', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 112
