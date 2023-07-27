@@ -86,12 +86,9 @@ class GetModel
         if (count($relArray) > 1) {
             foreach ($relArray as $key => $value) {
                 if ($key > 0) {
-                    $innerJoinText .= "INNER JOIN " . $value . " ON " . $relArray[0].".id_$typeArray[$key]" . "_" . "$typeArray[0]" . " = " . "$value" . ".id_$typeArray[$key]";
+                    $innerJoinText .= " INNER JOIN " . $value . " ON " . $relArray[0].".id_$typeArray[$key]" . "_" . "$typeArray[0]" . " = " . "$value" . ".id_$typeArray[$key]";
                 }
             }
-
-            // "SELECT * FROM orders INNER JOIN clients ON orders.id_client_order = clients.id_client";
-            // "SELECT $select FROM $relArray[0] INNER JOIN $relArray[1] ON $relArray[0].id_$typeArray[1]_$typeArray[0] = $relArray[1].id_$typeArray[1]";
 
             $sql = "SELECT $select from $relArray[0] $innerJoinText";
 
@@ -111,6 +108,63 @@ class GetModel
             }
 
             $stmt = Connection::connect()->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } else {
+            null;
+        }
+    }
+
+    // Peticiones GET con filtro entre tablas relacionadas
+
+    static public function getRelDataFilter($rel, $type, $select, $linkTo, $equalTo, $orderBy, $orderMode, $startAt, $endAt)
+    {
+        $linkToArray = explode(",", $linkTo);
+        $equalToArray = explode("_", $equalTo);
+        $linkToText = "";
+
+        if (count($linkToArray) > 1) {
+            foreach ($linkToArray as $key => $value) {
+                if ($key > 0) {
+                    $linkToText .= "AND " . $value . " = :" . $value . " ";
+                }
+            }
+        }
+
+        $relArray = explode(",", $rel);
+        $typeArray = explode(",", $type);
+        $innerJoinText = "";
+
+        if (count($relArray) > 1) {
+            foreach ($relArray as $key => $value) {
+                if ($key > 0) {
+                    $innerJoinText .= " INNER JOIN " . $value . " ON " . $relArray[0].".id_$typeArray[$key]" . "_" . "$typeArray[0]" . " = " . "$value" . ".id_$typeArray[$key]";
+                }
+            }
+
+            $sql = "SELECT $select from $relArray[0] $innerJoinText WHERE $linkToArray[0] = :$linkToArray[0] $linkToText";
+
+            //Ordenar sin limitar datos
+            if ($orderBy != null && $orderMode != null && $startAt == null && $endAt == null) {
+                $sql = "SELECT $select FROM $relArray[0] $innerJoinText WHERE $linkToArray[0] = :$linkToArray[0] $linkToText ORDER BY $orderBy $orderMode";
+            }
+
+            //Ordenar y limitar datos
+            if ($orderBy != null && $orderMode != null && $startAt != null && $endAt != null) {
+                $sql = "SELECT $select FROM $relArray[0] $innerJoinText WHERE $linkToArray[0] = :$linkToArray[0] $linkToText ORDER BY $orderBy $orderMode LIMIT $startAt,  $endAt";
+            }
+
+            //Limitar sin ordenar datos
+            if ($orderBy == null && $orderMode == null && $startAt != null && $endAt != null) {
+                $sql = "SELECT $select FROM $relArray[0] $innerJoinText WHERE $linkToArray[0] = :$linkToArray[0] $linkToText LIMIT $startAt,  $endAt";
+            }
+
+            $stmt = Connection::connect()->prepare($sql);
+
+            foreach ($linkToArray as $key => $value) {
+                $stmt->bindParam(":" . $value, $equalToArray[$key], PDO::PARAM_STR);
+            }
+
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_CLASS);
         } else {

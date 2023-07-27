@@ -638,3 +638,437 @@ Stack trace:
 #5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
 #6 {main}
   thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 114
+[27-Jul-2023 21:51:19 Europe/Berlin] PHP Warning:  Undefined array key "rel" in C:\xampp\htdocs\php_apirest\app\routes\services\GET.php on line 11
+[27-Jul-2023 21:51:19 Europe/Berlin] PHP Warning:  Undefined array key "type" in C:\xampp\htdocs\php_apirest\app\routes\services\GET.php on line 12
+[27-Jul-2023 21:51:19 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'favicon.ico' doesn't exist in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:30
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(30): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData('favicon.ico', '*', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getData('favicon.ico', '*', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 30
+[27-Jul-2023 21:53:21 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'categories.id_product_categorie' in 'on clause' in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:114
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(114): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(22): GetModel::getRelData('categories,prod...', 'categorie,produ...', '*', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(22): GetController::getRelData('categories,prod...', 'categorie,produ...', '*', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 114
+[27-Jul-2023 21:53:33 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'categories.id_product_category' in 'on clause' in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:114
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(114): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(22): GetModel::getRelData('categories,prod...', 'category,produc...', '*', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(22): GetController::getRelData('categories,prod...', 'category,produc...', '*', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 114
+[27-Jul-2023 21:54:30 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'categories.id_categoryINNER' in 'on clause' in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:114
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(114): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(22): GetModel::getRelData('products,catego...', 'product,categor...', '*', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(22): GetController::getRelData('products,catego...', 'product,categor...', '*', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 114
+[27-Jul-2023 21:54:51 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'products.id_order_product' in 'on clause' in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:114
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(114): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(22): GetModel::getRelData('products,orders', 'product,order', '*', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(22): GetController::getRelData('products,orders', 'product,order', '*', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 114
+[27-Jul-2023 21:55:09 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'products.id_productINNER' in 'on clause' in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:114
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(114): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(22): GetModel::getRelData('orders,products...', 'order,product,c...', '*', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(22): GetController::getRelData('orders,products...', 'order,product,c...', '*', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 114
+[27-Jul-2023 21:55:44 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'clients.id_clientINNER' in 'on clause' in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:114
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(114): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(22): GetModel::getRelData('orders,clients,...', 'order,client,pr...', '*', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(22): GetController::getRelData('orders,clients,...', 'order,client,pr...', '*', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 114
+[27-Jul-2023 21:56:28 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'orders.id_category_order' in 'on clause' in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:111
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(111): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(22): GetModel::getRelData('orders,clients,...', 'order,client,pr...', '*', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(22): GetController::getRelData('orders,clients,...', 'order,client,pr...', '*', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 111
+[27-Jul-2023 21:56:57 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'categories.id_product_category' in 'on clause' in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:111
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(111): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(22): GetModel::getRelData('categories,prod...', 'category,produc...', '*', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(22): GetController::getRelData('categories,prod...', 'category,produc...', '*', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 111
+[27-Jul-2023 21:57:27 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'products.id_order_product' in 'on clause' in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:111
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(111): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(22): GetModel::getRelData('products,catego...', 'product,categor...', '*', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(22): GetController::getRelData('products,catego...', 'product,categor...', '*', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 111
+[27-Jul-2023 22:00:08 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'clients.id_clientINNER' in 'on clause' in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:111
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(111): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(22): GetModel::getRelData('orders,clients,...', 'order,client,pr...', '*', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(22): GetController::getRelData('orders,clients,...', 'order,client,pr...', '*', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 111
+[27-Jul-2023 22:10:26 Europe/Berlin] PHP Warning:  Undefined array key "rel" in C:\xampp\htdocs\php_apirest\app\routes\services\GET.php on line 11
+[27-Jul-2023 22:10:26 Europe/Berlin] PHP Warning:  Undefined array key "type" in C:\xampp\htdocs\php_apirest\app\routes\services\GET.php on line 12
+[27-Jul-2023 22:10:26 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'categories' in 'field list' in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:30
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(30): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData('categories', 'categories', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getData('categories', 'categories', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 30
+[27-Jul-2023 22:10:42 Europe/Berlin] PHP Warning:  Undefined array key "rel" in C:\xampp\htdocs\php_apirest\app\routes\services\GET.php on line 11
+[27-Jul-2023 22:10:42 Europe/Berlin] PHP Warning:  Undefined array key "type" in C:\xampp\htdocs\php_apirest\app\routes\services\GET.php on line 12
+[27-Jul-2023 22:27:26 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method GetModel::getRelData() in C:\xampp\htdocs\php_apirest\app\controllers\GetController.php:22
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(22): GetController::getRelData('orders,clients,...', 'order,client,pr...', '*', NULL, NULL, NULL, NULL)
+#1 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\controllers\GetController.php on line 22
+[27-Jul-2023 22:39:53 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM relations WHERE id_order = '1' AND id_order_client = '1'' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:73
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(73): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(16): GetModel::getDataFilter('relations', '', 'id_order,id_ord...', '1_1', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(19): GetController::getDataFilter('relations', '', 'id_order,id_ord...', '1_1', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 73
+[27-Jul-2023 22:42:20 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:167
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(167): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(28): GetModel::getRelDataFilter('orders,clients', 'order,client', '', 'id_order,id_ord...', '1_1', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getRelDataFilter('orders,clients', 'order,client', '', 'id_order,id_ord...', '1_1', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 167
+[27-Jul-2023 22:42:35 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'from orders  INNER JOIN clients ON orders.id_client_order = clients.id_client' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:111
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(111): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(22): GetModel::getRelData('orders,clients', 'order,client', '', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(22): GetController::getRelData('orders,clients', 'order,client', '', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 111
+[27-Jul-2023 22:43:03 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:167
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(167): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(28): GetModel::getRelDataFilter('orders,clients', 'order,client', '*', 'id_order,id_cli...', '1_1', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getRelDataFilter('orders,clients', 'order,client', '*', 'id_order,id_cli...', '1_1', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 167
+[27-Jul-2023 22:43:16 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:167
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(167): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(28): GetModel::getRelDataFilter('orders,clients', 'order,client', 'id_order', 'id_order,id_cli...', '1_1', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getRelDataFilter('orders,clients', 'order,client', 'id_order', 'id_order,id_cli...', '1_1', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 167
+[27-Jul-2023 22:44:07 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:167
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(167): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(28): GetModel::getRelDataFilter('orders,clients', 'order,client', '*', 'id_order,id_cli...', '1_1', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getRelDataFilter('orders,clients', 'order,client', '*', 'id_order,id_cli...', '1_1', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 167
+[27-Jul-2023 22:44:37 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:167
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(167): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(28): GetModel::getRelDataFilter('orders,clients', 'order,client', '*', 'id_order,id_cli...', '1_1', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getRelDataFilter('orders,clients', 'order,client', '*', 'id_order,id_cli...', '1_1', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 167
+[27-Jul-2023 22:45:23 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:167
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(167): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(28): GetModel::getRelDataFilter('orders,clients', 'order,client', '*', 'id_order', '1_1', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getRelDataFilter('orders,clients', 'order,client', '*', 'id_order', '1_1', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 167
+[27-Jul-2023 22:45:26 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:167
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(167): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(28): GetModel::getRelDataFilter('orders,clients', 'order,client', '*', 'id_order', '1', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getRelDataFilter('orders,clients', 'order,client', '*', 'id_order', '1', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 167
+[27-Jul-2023 22:47:34 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:167
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(167): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(28): GetModel::getRelDataFilter('orders,clients', 'order,client', 'id_client_order', 'id_order', '1', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getRelDataFilter('orders,clients', 'order,client', 'id_client_order', 'id_order', '1', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 167
+[27-Jul-2023 22:49:09 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'from orders  INNER JOIN clients ON orders.id_client_order = clients.id_client' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:111
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(111): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(22): GetModel::getRelData('orders,clients', 'order,client', '', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(22): GetController::getRelData('orders,clients', 'order,client', '', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 111
+[27-Jul-2023 22:49:39 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:167
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(167): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(28): GetModel::getRelDataFilter('products,catego...', 'product,categor...', '*', 'id_product', '1', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getRelDataFilter('products,catego...', 'product,categor...', '*', 'id_product', '1', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 167
+[27-Jul-2023 22:50:15 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:167
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(167): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(28): GetModel::getRelDataFilter('products,catego...', 'product,categor...', 'name_product', 'id_product', '1', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getRelDataFilter('products,catego...', 'product,categor...', 'name_product', 'id_product', '1', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 167
+[27-Jul-2023 22:53:47 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:167
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(167): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(28): GetModel::getRelDataFilter('products,catego...', 'product,categor...', 'name_product', 'id_product', '1', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getRelDataFilter('products,catego...', 'product,categor...', 'name_product', 'id_product', '1', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 167
+[27-Jul-2023 22:56:57 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:167
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(167): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(28): GetModel::getRelDataFilter('products,catego...', 'product,categor...', 'name_product', 'id_product', '1', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getRelDataFilter('products,catego...', 'product,categor...', 'name_product', 'id_product', '1', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 167
+[27-Jul-2023 22:58:21 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:167
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(167): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(28): GetModel::getRelDataFilter('products,catego...', 'product,categor...', 'name_product', 'id_product', '1', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getRelDataFilter('products,catego...', 'product,categor...', 'name_product', 'id_product', '1', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 167
+[27-Jul-2023 22:58:26 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:167
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(167): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(28): GetModel::getRelDataFilter('products,catego...', 'product,categor...', '*', 'id_product', '1', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getRelDataFilter('products,catego...', 'product,categor...', '*', 'id_product', '1', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 167
+[27-Jul-2023 22:59:00 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:167
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(167): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(28): GetModel::getRelDataFilter('products,catego...', 'product,categor...', '*', 'name_product', 'Guitarra ac\xC3\xBAst...', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getRelDataFilter('products,catego...', 'product,categor...', '*', 'name_product', 'Guitarra ac\xC3\xBAst...', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 167
+[27-Jul-2023 22:59:40 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:167
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(167): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(28): GetModel::getRelDataFilter('products,catego...', 'product,categor...', 'id_product', 'name_product', 'Guitarra ac\xC3\xBAst...', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getRelDataFilter('products,catego...', 'product,categor...', 'id_product', 'name_product', 'Guitarra ac\xC3\xBAst...', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 167
+[27-Jul-2023 22:59:48 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:167
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(167): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(28): GetModel::getRelDataFilter('products,catego...', 'product,categor...', '*', 'name_product', 'Guitarra ac\xC3\xBAst...', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getRelDataFilter('products,catego...', 'product,categor...', '*', 'name_product', 'Guitarra ac\xC3\xBAst...', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 167
+[27-Jul-2023 23:03:12 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:167
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(167): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(28): GetModel::getRelDataFilter('products,catego...', 'product,categor...', '*', 'name_product', 'Guitarra ac\xC3\xBAst...', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getRelDataFilter('products,catego...', 'product,categor...', '*', 'name_product', 'Guitarra ac\xC3\xBAst...', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 167
+[27-Jul-2023 23:03:13 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:167
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(167): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(28): GetModel::getRelDataFilter('products,catego...', 'product,categor...', '*', 'name_product', 'Guitarra ac\xC3\xBAst...', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getRelDataFilter('products,catego...', 'product,categor...', '*', 'name_product', 'Guitarra ac\xC3\xBAst...', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 167
+[27-Jul-2023 23:03:51 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:169
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(169): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(28): GetModel::getRelDataFilter('products,catego...', 'product,categor...', '*', 'name_product', 'Guitarra ac\xC3\xBAst...', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getRelDataFilter('products,catego...', 'product,categor...', '*', 'name_product', 'Guitarra ac\xC3\xBAst...', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 169
+[27-Jul-2023 23:04:13 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:169
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(169): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(28): GetModel::getRelDataFilter('products,catego...', 'product,categor...', '*', 'name_product', '', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getRelDataFilter('products,catego...', 'product,categor...', '*', 'name_product', '', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 169
+[27-Jul-2023 23:04:21 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:169
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(169): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(28): GetModel::getRelDataFilter('products,catego...', 'product,categor...', '*', 'id_product', '', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getRelDataFilter('products,catego...', 'product,categor...', '*', 'id_product', '', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 169
+[27-Jul-2023 23:04:26 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:169
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(169): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(28): GetModel::getRelDataFilter('products,catego...', 'product,categor...', '*', 'id_product', '1', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getRelDataFilter('products,catego...', 'product,categor...', '*', 'id_product', '1', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 169
+[27-Jul-2023 23:05:23 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'category_name' in 'field list' in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:111
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(111): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(22): GetModel::getRelData('products,catego...', 'product,categor...', 'name_product, c...', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(22): GetController::getRelData('products,catego...', 'product,categor...', 'name_product, c...', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 111
+[27-Jul-2023 23:05:29 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'from products  INNER JOIN categories ON products.id_category_product = catego...' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:111
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(111): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(22): GetModel::getRelData('products,catego...', 'product,categor...', '', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(22): GetController::getRelData('products,catego...', 'product,categor...', '', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 111
+[27-Jul-2023 23:05:55 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:169
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(169): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(28): GetModel::getRelDataFilter('products,catego...', 'product,categor...', 'name_product,na...', 'name_category', 'Guitars', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getRelDataFilter('products,catego...', 'product,categor...', 'name_product,na...', 'name_category', 'Guitars', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 169
+[27-Jul-2023 23:07:42 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:169
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(169): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(28): GetModel::getRelDataFilter('products,catego...', 'product,categor...', '*', 'price_product', '132059.0000', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getRelDataFilter('products,catego...', 'product,categor...', '*', 'price_product', '132059.0000', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 169
