@@ -19,7 +19,6 @@ class GetController {
     }
     
     static public function getRelData($rel, $type, $select, $orderBy, $orderMode, $startAt, $endAt) {
-
         $response = GetModel::getRelData($rel, $type, $select, $orderBy, $orderMode, $startAt, $endAt);
         $return = new GetController();
         $return -> fncResponse($response);

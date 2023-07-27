@@ -574,3 +574,67 @@ Stack trace:
 #5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
 #6 {main}
   thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 112
+[27-Jul-2023 20:44:19 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'php_apirest.relations' doesn't exist in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:30
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(30): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData('relations', '*', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getData('relations', '*', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 30
+[27-Jul-2023 20:58:52 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'favicon.ico' doesn't exist in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:30
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(30): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData('favicon.ico', '*', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getData('favicon.ico', '*', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 30
+[27-Jul-2023 21:00:09 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'favicon.ico' doesn't exist in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:30
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(30): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(9): GetModel::getData('favicon.ico', '*', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(25): GetController::getData('favicon.ico', '*', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 30
+[27-Jul-2023 21:21:28 Europe/Berlin] PHP Warning:  Undefined array key "linkTo" in C:\xampp\htdocs\php_apirest\app\routes\services\GET.php on line 13
+[27-Jul-2023 21:21:28 Europe/Berlin] PHP Warning:  Undefined array key "equalTo" in C:\xampp\htdocs\php_apirest\app\routes\services\GET.php on line 14
+[27-Jul-2023 21:21:34 Europe/Berlin] PHP Warning:  Undefined array key "linkTo" in C:\xampp\htdocs\php_apirest\app\routes\services\GET.php on line 13
+[27-Jul-2023 21:21:34 Europe/Berlin] PHP Warning:  Undefined array key "equalTo" in C:\xampp\htdocs\php_apirest\app\routes\services\GET.php on line 14
+[27-Jul-2023 21:48:16 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'orders.id_order_client' in 'on clause' in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:114
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(114): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(22): GetModel::getRelData('orders,clients', 'client,order', '*', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(22): GetController::getRelData('orders,clients', 'client,order', '*', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 114
+[27-Jul-2023 21:48:39 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'clients.id_clientINNER' in 'on clause' in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:114
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(114): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(22): GetModel::getRelData('orders,clients,...', 'order,client,pr...', '*', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(22): GetController::getRelData('orders,clients,...', 'order,client,pr...', '*', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 114
+[27-Jul-2023 21:49:44 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'products.id_order_product' in 'on clause' in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:114
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(114): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(22): GetModel::getRelData('products,orders...', 'product,order,c...', '*', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(22): GetController::getRelData('products,orders...', 'product,order,c...', '*', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 114

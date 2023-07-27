@@ -86,10 +86,14 @@ class GetModel
         if (count($relArray) > 1) {
             foreach ($relArray as $key => $value) {
                 if ($key > 0) {
-                    $innerJoinText .= "INNER JOIN " . $value . " ON " . $relArray[0] . ".id_$typeArray[$key]" . "_" . "$typeArray[0]" . " = " . "$value" . ".id_$typeArray[$key]";
+                    $innerJoinText .= "INNER JOIN " . $value . " ON " . $relArray[0].".id_$typeArray[$key]" . "_" . "$typeArray[0]" . " = " . "$value" . ".id_$typeArray[$key]";
                 }
             }
-            $sql = "SELECT $select from $relArray[0] INNER JOIN $relArray[1] ON $relArray[0].id_$typeArray[1].$typeArray[0] = $relArray[1].id_$typeArray[1]";
+
+            // "SELECT * FROM orders INNER JOIN clients ON orders.id_client_order = clients.id_client";
+            // "SELECT $select FROM $relArray[0] INNER JOIN $relArray[1] ON $relArray[0].id_$typeArray[1]_$typeArray[0] = $relArray[1].id_$typeArray[1]";
+
+            $sql = "SELECT $select from $relArray[0] $innerJoinText";
 
             //Ordenar sin limitar datos
             if ($orderBy != null && $orderMode != null && $startAt == null && $endAt == null) {
@@ -109,6 +113,8 @@ class GetModel
             $stmt = Connection::connect()->prepare($sql);
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } else {
+            null;
         }
     }
 }
