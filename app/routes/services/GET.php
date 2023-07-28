@@ -24,7 +24,7 @@ else if(isset($rel) && isset($type) && $table == "relations" && !$linkTo && !$eq
 } //Peticiones GET con filtro entre tablas relacionadas
 else if(isset($rel) && isset($type) && $table == "relations" && isset($linkTo) && isset($equalTo)) {
     $response -> getRelDataFilter($rel, $type, $select, $linkTo, $equalTo, $orderBy, $orderMode, $startAt, $endAt);
-} // Petición GET para el buscador sin relaci7ones
+} // Petición GET para el buscador sin relaciones ni filtros
 else if (isset($linkTo) && isset($search)){
     $response -> getDataSearch($table, $select, $search, $linkTo, $orderBy, $orderMode, $startAt, $endAt);
 } // Petición GET sin filtro

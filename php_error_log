@@ -1,0 +1,240 @@
+[28-Jul-2023 15:56:52 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''%Guitar%' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:197
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(197): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(34): GetModel::getDataSearch('categories', '*', 'Guitar', 'name_category', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(29): GetController::getDataSearch('categories', '*', 'Guitar', 'name_category', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 197
+[28-Jul-2023 15:59:27 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''%Guitars%' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:197
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(197): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(34): GetModel::getDataSearch('categories', '*', 'Guitars', 'name_category', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(29): GetController::getDataSearch('categories', '*', 'Guitars', 'name_category', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 197
+[28-Jul-2023 16:18:11 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'id_category LIKE '%Guitars_2%'' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:204
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(204): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(34): GetModel::getDataSearch('categories', '*', 'Guitars_2', 'name_category,i...', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(29): GetController::getDataSearch('categories', '*', 'Guitars_2', 'name_category,i...', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 204
+[28-Jul-2023 16:18:17 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'id_category LIKE '%Guitars_1%'' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:204
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(204): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(34): GetModel::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(29): GetController::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 204
+[28-Jul-2023 16:20:44 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'id_category LIKE '%Guitars_1%'' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:204
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(204): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(34): GetModel::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(29): GetController::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 204
+[28-Jul-2023 16:22:27 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'id_category LIKE '%Guitars_1%'' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:204
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(204): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(34): GetModel::getDataSearch('clients', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(29): GetController::getDataSearch('clients', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 204
+[28-Jul-2023 16:22:31 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%%'' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:204
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(204): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(34): GetModel::getDataSearch('clients', '*', '', '', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(29): GetController::getDataSearch('clients', '*', '', '', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 204
+[28-Jul-2023 16:23:43 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIKE '%%'' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:204
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(204): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(34): GetModel::getDataSearch('clients', '*', '', '', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(29): GetController::getDataSearch('clients', '*', '', '', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 204
+[28-Jul-2023 16:24:01 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'id_category LIKE '%Guitars_1%'' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:204
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(204): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(34): GetModel::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(29): GetController::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 204
+[28-Jul-2023 16:24:56 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'id_category LIKE '%Guitars_1%'' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:204
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(204): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(34): GetModel::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(29): GetController::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 204
+[28-Jul-2023 16:27:04 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'id_category LIKE '%Guitars_1%'' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:204
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(204): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(34): GetModel::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(29): GetController::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 204
+[28-Jul-2023 16:27:48 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'id_category LIKE '%Guitars_1%'' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:204
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(204): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(34): GetModel::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(29): GetController::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 204
+[28-Jul-2023 16:28:12 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'name_category LIKE '%1_Guitars%'' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:204
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(204): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(34): GetModel::getDataSearch('categories', '*', '1_Guitars', 'id_category,nam...', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(29): GetController::getDataSearch('categories', '*', '1_Guitars', 'id_category,nam...', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 204
+[28-Jul-2023 16:28:35 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'name_category LIKE '%1_Guitars%'' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:204
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(204): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(34): GetModel::getDataSearch('categories', '*', '1_Guitars', 'id_category,nam...', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(29): GetController::getDataSearch('categories', '*', '1_Guitars', 'id_category,nam...', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 204
+[28-Jul-2023 16:29:52 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'id_category LIKE '%Guitars_1%'' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:204
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(204): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(34): GetModel::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(29): GetController::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 204
+[28-Jul-2023 16:30:39 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'id_category LIKE '%Guitars_1%'' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:204
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(204): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(34): GetModel::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(29): GetController::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 204
+[28-Jul-2023 16:32:03 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'id_category LIKE '%Guitars_1%'' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:204
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(204): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(34): GetModel::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(29): GetController::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 204
+[28-Jul-2023 16:34:30 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'id_category LIKE '%Guitars_1%'' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:204
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(204): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(34): GetModel::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(29): GetController::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 204
+[28-Jul-2023 16:36:05 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'id_category LIKE '%Guitars_1%'' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:204
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(204): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(34): GetModel::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(29): GetController::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 204
+[28-Jul-2023 16:36:22 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'id_category LIKE '%Guitars_1%'' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:204
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(204): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(34): GetModel::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(29): GetController::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 204
+[28-Jul-2023 16:41:17 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:214
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(214): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(34): GetModel::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(29): GetController::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 214
+[28-Jul-2023 16:42:02 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'id_category LIKE '%Guitars%' AND id_category = '1'' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:216
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(216): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(34): GetModel::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(29): GetController::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 216
+[28-Jul-2023 16:42:35 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'name_category LIKE '%1%' AND name_category = 'Guitars'' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:216
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(216): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(34): GetModel::getDataSearch('categories', '*', '1_Guitars', 'id_category,nam...', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(29): GetController::getDataSearch('categories', '*', '1_Guitars', 'id_category,nam...', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 216
+[28-Jul-2023 16:43:57 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'id_category LIKE '%Guitars%' AND id_category = '1'' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:216
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(216): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(34): GetModel::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(29): GetController::getDataSearch('categories', '*', 'Guitars_1', 'name_category,i...', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 216

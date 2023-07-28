@@ -172,28 +172,47 @@ class GetModel
         }
     }
 
-    // Peticion GET con buscador
+    // Peticion GET con buscador (con filtros y sin filtros)
 
     static public function getDataSearch($table, $select, $search, $linkTo, $orderBy, $orderMode, $startAt, $endAt)
     {
-        $sql = "SELECT $select FROM $table WHERE $linkTo LIKE '%$search%";
+        $linkToArray = explode(",", $linkTo);
+        $searchArray = explode("_", $search);
+        $linkToText = "";
 
+        if (count($linkToArray) > 1) {
+            foreach ($linkToArray as $key => $value) {
+                if ($key > 0) {
+                    $linkToText .= "AND " . $value . " = :" . $value . " ";
+                }
+            }
+        }
+
+        $sql = "SELECT $select FROM $table WHERE $linkToArray[0] LIKE '%$searchArray[0]%' $linkToText";
+    
         //Ordenar sin limitar datos
         if ($orderBy != null && $orderMode != null && $startAt == null && $endAt == null) {
-            $sql = "SELECT $select FROM $table WHERE $linkTo LIKE '%$search% ORDER BY $orderBy $orderMode";
+            $sql .= " ORDER BY $orderBy $orderMode";
         }
-
+    
         //Ordenar y limitar datos
         if ($orderBy != null && $orderMode != null && $startAt != null && $endAt != null) {
-            $sql = "SELECT $select FROM $table WHERE $linkTo LIKE '%$search% ORDER BY $orderBy $orderMode LIMIT $startAt,  $endAt";
+            $sql .= " ORDER BY $orderBy $orderMode LIMIT :startAt, :endAt";
         }
-
+    
         //Limitar sin ordenar datos
         if ($orderBy == null && $orderMode == null && $startAt != null && $endAt != null) {
-            $sql = "SELECT $select FROM $table WHERE $linkTo LIKE '%$search% LIMIT $startAt,  $endAt";
+            $sql .= " LIMIT :startAt, :endAt";
         }
-
+    
         $stmt = Connection::connect()->prepare($sql);
+
+        foreach ($linkToArray as $key => $value) {
+            if ($key > 0) {
+                $stmt->bindValue(":" . $value, $searchArray[$key], PDO::PARAM_STR);
+            }
+        }
+    
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_CLASS);
     }
