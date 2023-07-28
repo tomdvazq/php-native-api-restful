@@ -278,9 +278,17 @@ class GetModel
         }
     }
 
-    static public function getDataRange($table, $betweenIn, $betweenOut, $select, $linkTo, $orderBy, $orderMode, $startAt, $endAt)
+    //Peticiones GET con rangos
+
+    static public function getDataRange($table, $betweenIn, $betweenOut, $select, $linkTo, $orderBy, $orderMode, $startAt, $endAt, $filterTo, $inTo)
     {
-        $sql = "SELECT $select FROM $table WHERE $linkTo BETWEEN '$betweenIn' AND '$betweenOut'";
+        $filter = "";
+
+        if ($filterTo !== null && $inTo !== null) {
+            $filter = " AND " . $filterTo . " IN (" . $inTo . ")";
+        }
+
+        $sql = "SELECT $select FROM $table WHERE $linkTo BETWEEN '$betweenIn' AND '$betweenOut' $filter";
 
         //Ordenar sin limitar datos
         if ($orderBy != null && $orderMode != null && $startAt == null && $endAt == null) {
@@ -300,5 +308,51 @@ class GetModel
         $stmt = Connection::connect()->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_CLASS);
+    }
+
+    //Peticiones GET con rangos entre tablas relacionadas
+
+    static public function getRelDataRange($rel, $type, $betweenIn, $betweenOut, $select, $linkTo, $orderBy, $orderMode, $startAt, $endAt, $filterTo, $inTo)
+    {
+        $relArray = explode(",", $rel);
+        $typeArray = explode(",", $type);
+        $innerJoinText = "";
+
+        if (count($relArray) > 1) {
+            foreach ($relArray as $key => $value) {
+                if ($key > 0) {
+                    $innerJoinText .= " INNER JOIN " . $value . " ON " . $relArray[0] . ".id_$typeArray[$key]" . "_" . "$typeArray[0]" . " = " . "$value" . ".id_$typeArray[$key]";
+                }
+            }
+
+            $filter = "";
+
+            if ($filterTo !== null && $inTo !== null) {
+                $filter = " AND " . $filterTo . " IN (" . $inTo . ")";
+            }
+
+            $sql = "SELECT $select FROM $relArray[0] $innerJoinText WHERE $relArray[0].$linkTo BETWEEN '$betweenIn' AND '$betweenOut' $filter";
+
+            //Ordenar sin limitar datos
+            if ($orderBy != null && $orderMode != null && $startAt == null && $endAt == null) {
+                $sql .= " ORDER BY $orderBy $orderMode";
+            }
+
+            //Ordenar y limitar datos
+            if ($orderBy != null && $orderMode != null && $startAt != null && $endAt != null) {
+                $sql .= " ORDER BY $orderBy $orderMode LIMIT :startAt, :endAt";
+            }
+
+            //Limitar sin ordenar datos
+            if ($orderBy == null && $orderMode == null && $startAt != null && $endAt != null) {
+                $sql .= " LIMIT :startAt, :endAt";
+            }
+
+            $stmt = Connection::connect()->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } else {
+            null;
+        }
     }
 }
