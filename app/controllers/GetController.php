@@ -36,6 +36,12 @@ class GetController {
         $return -> fncResponse($response);
     }
 
+    static public function getRelDataSearch($rel, $type, $select, $linkTo, $search, $orderBy, $orderMode, $startAt, $endAt) {
+        $response = GetModel::getRelDataSearch($rel, $type, $select, $linkTo, $search, $orderBy, $orderMode, $startAt, $endAt);
+        $return = new GetController();
+        $return -> fncResponse($response);
+    }
+
 
     public function fncResponse($response) {
         if(!empty($response)) {

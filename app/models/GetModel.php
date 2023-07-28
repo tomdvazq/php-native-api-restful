@@ -216,4 +216,64 @@ class GetModel
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_CLASS);
     }
+
+    // Peticiones GET con filtro entre tablas relacionadas
+
+    static public function getRelDataSearch($rel, $type, $select, $linkTo, $search, $orderBy, $orderMode, $startAt, $endAt)
+    {
+        $linkToArray = explode(",", $linkTo);
+        $searchArray = explode("_", $search);
+        $linkToText = "";
+
+        if (count($linkToArray) > 1) {
+            foreach ($linkToArray as $key => $value) {
+                if ($key > 0) {
+                    $linkToText .= "AND " . $value . " = :" . $value . " ";
+                }
+            }
+        }
+
+        $relArray = explode(",", $rel);
+        $typeArray = explode(",", $type);
+        $innerJoinText = "";
+
+        if (count($relArray) > 1) {
+            foreach ($relArray as $key => $value) {
+                if ($key > 0) {
+                    $innerJoinText .= " INNER JOIN " . $value . " ON " . $relArray[0].".id_$typeArray[$key]" . "_" . "$typeArray[0]" . " = " . "$value" . ".id_$typeArray[$key]";
+                }
+            }
+
+            $sql = "SELECT $select from $relArray[0] $innerJoinText WHERE $linkToArray[0] LIKE '%$searchArray[0]%' $linkToText";
+
+        //Ordenar sin limitar datos
+        if ($orderBy != null && $orderMode != null && $startAt == null && $endAt == null) {
+            $sql .= " ORDER BY $orderBy $orderMode";
+        }
+    
+        //Ordenar y limitar datos
+        if ($orderBy != null && $orderMode != null && $startAt != null && $endAt != null) {
+            $sql .= " ORDER BY $orderBy $orderMode LIMIT :startAt, :endAt";
+        }
+    
+        //Limitar sin ordenar datos
+        if ($orderBy == null && $orderMode == null && $startAt != null && $endAt != null) {
+            $sql .= " LIMIT :startAt, :endAt";
+        }
+    
+        $stmt = Connection::connect()->prepare($sql);
+
+        foreach ($linkToArray as $key => $value) {
+            if ($key > 0) {
+                $stmt->bindValue(":" . $value, $searchArray[$key], PDO::PARAM_STR);
+            }
+        }
+    
+        $stmt->execute();
+    
+        return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } else {
+            null;
+        }
+    }
 }
