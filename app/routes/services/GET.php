@@ -12,6 +12,7 @@ $rel = $_GET["rel"] ?? null;
 $type = $_GET["type"] ?? null;
 $linkTo = $_GET["linkTo"] ?? null;
 $equalTo = $_GET["equalTo"] ?? null;
+$search = $_GET['search'] ?? null;
 $response = new GetController();
 
 // Pëtición GET con filtro 
@@ -23,6 +24,9 @@ else if(isset($rel) && isset($type) && $table == "relations" && !$linkTo && !$eq
 } //Peticiones GET con filtro entre tablas relacionadas
 else if(isset($rel) && isset($type) && $table == "relations" && isset($linkTo) && isset($equalTo)) {
     $response -> getRelDataFilter($rel, $type, $select, $linkTo, $equalTo, $orderBy, $orderMode, $startAt, $endAt);
+} // Petición GET para el buscador sin relaci7ones
+else if (isset($linkTo) && isset($search)){
+    $response -> getDataSearch($table, $select, $search, $linkTo, $orderBy, $orderMode, $startAt, $endAt);
 } // Petición GET sin filtro
 else {
     $response -> getData($table, $select, $orderBy, $orderMode, $startAt, $endAt);

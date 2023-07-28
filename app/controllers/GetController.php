@@ -24,8 +24,14 @@ class GetController {
         $return -> fncResponse($response);
     }
 
-    static public function getRelDataFilter($rel, $type, $select, $linkTo, $equalTo, $orderBy, $orderMode, $startAt, $endAt,) {
+    static public function getRelDataFilter($rel, $type, $select, $linkTo, $equalTo, $orderBy, $orderMode, $startAt, $endAt) {
         $response = GetModel::getRelDataFilter($rel, $type, $select, $linkTo, $equalTo, $orderBy, $orderMode, $startAt, $endAt);
+        $return = new GetController();
+        $return -> fncResponse($response);
+    }
+
+    static public function getDataSearch($table, $select, $search, $linkTo, $orderBy, $orderMode, $startAt, $endAt) {
+        $response = GetModel::getDataSearch($table, $select, $search, $linkTo, $orderBy, $orderMode, $startAt, $endAt);
         $return = new GetController();
         $return -> fncResponse($response);
     }

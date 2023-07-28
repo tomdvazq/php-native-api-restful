@@ -171,4 +171,30 @@ class GetModel
             null;
         }
     }
+
+    // Peticion GET con buscador
+
+    static public function getDataSearch($table, $select, $search, $linkTo, $orderBy, $orderMode, $startAt, $endAt)
+    {
+        $sql = "SELECT $select FROM $table WHERE $linkTo LIKE '%$search%";
+
+        //Ordenar sin limitar datos
+        if ($orderBy != null && $orderMode != null && $startAt == null && $endAt == null) {
+            $sql = "SELECT $select FROM $table WHERE $linkTo LIKE '%$search% ORDER BY $orderBy $orderMode";
+        }
+
+        //Ordenar y limitar datos
+        if ($orderBy != null && $orderMode != null && $startAt != null && $endAt != null) {
+            $sql = "SELECT $select FROM $table WHERE $linkTo LIKE '%$search% ORDER BY $orderBy $orderMode LIMIT $startAt,  $endAt";
+        }
+
+        //Limitar sin ordenar datos
+        if ($orderBy == null && $orderMode == null && $startAt != null && $endAt != null) {
+            $sql = "SELECT $select FROM $table WHERE $linkTo LIKE '%$search% LIMIT $startAt,  $endAt";
+        }
+
+        $stmt = Connection::connect()->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_CLASS);
+    }
 }
