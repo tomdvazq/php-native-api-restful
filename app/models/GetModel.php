@@ -310,7 +310,7 @@ class GetModel
         return $stmt->fetchAll(PDO::FETCH_CLASS);
     }
 
-    //Peticiones GET con rangos entre tablas relacionadas
+    //Peticiones GET con rangos entre tablas con relación
 
     static public function getRelDataRange($rel, $type, $betweenIn, $betweenOut, $select, $linkTo, $orderBy, $orderMode, $startAt, $endAt, $filterTo, $inTo)
     {

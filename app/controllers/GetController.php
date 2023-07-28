@@ -2,6 +2,8 @@
 
 require_once "./app/models/GetModel.php";
 
+// Controladores
+
 class GetController {
 
     static public function getData($table, $select, $orderBy, $orderMode, $startAt, $endAt) {
