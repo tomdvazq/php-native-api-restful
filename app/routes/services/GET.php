@@ -13,6 +13,8 @@ $type = $_GET["type"] ?? null;
 $linkTo = $_GET["linkTo"] ?? null;
 $equalTo = $_GET["equalTo"] ?? null;
 $search = $_GET['search'] ?? null;
+$betweenIn = $_GET['betweenIn'] ?? null;
+$betweenOut = $_GET['betweenOut'] ?? null;
 $response = new GetController();
 
 // Pëtición GET con filtro 
@@ -29,7 +31,10 @@ else if (!isset($rel) && !isset($type) && isset($linkTo) && isset($search)){
     $response -> getDataSearch($table, $select, $search, $linkTo, $orderBy, $orderMode, $startAt, $endAt);
 } // Petición GET para el buscador con relaciones
 else if (isset($rel) && isset($type) && $table == "relations" && isset($linkTo) && isset($search)){
-    $response -> getRelDataSearch($rel, $type, $table, $select, $linkTo, $search, $orderBy, $orderMode, $startAt, $endAt);
+    $response -> getRelDataSearch($rel, $type, $select, $linkTo, $search, $orderBy, $orderMode, $startAt, $endAt);
+} // Petición GET para seleccionar rangos
+else if (isset($linkTo) && isset($betweenIn) && isset($betweenOut)){
+    $response -> getDataRange($betweenIn, $betweenOut, $select, $linkTo, $orderBy, $orderMode, $startAt, $endAt);
 } // Petición GET sin filtro
 else {
     $response -> getData($table, $select, $orderBy, $orderMode, $startAt, $endAt);

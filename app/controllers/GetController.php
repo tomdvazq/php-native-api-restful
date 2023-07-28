@@ -42,6 +42,12 @@ class GetController {
         $return -> fncResponse($response);
     }
 
+    static public function getDataRange($betweenIn, $betweenOut, $select, $linkTo, $orderBy, $orderMode, $startAt, $endAt) {
+        $response = GetModel::getDataRange($betweenIn, $betweenOut, $select, $linkTo, $orderBy, $orderMode, $startAt, $endAt);
+        $return = new GetController();
+        $return -> fncResponse($response);
+    }
+
 
     public function fncResponse($response) {
         if(!empty($response)) {

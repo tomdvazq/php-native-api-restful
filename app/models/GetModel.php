@@ -86,11 +86,11 @@ class GetModel
         if (count($relArray) > 1) {
             foreach ($relArray as $key => $value) {
                 if ($key > 0) {
-                    $innerJoinText .= " INNER JOIN " . $value . " ON " . $relArray[0].".id_$typeArray[$key]" . "_" . "$typeArray[0]" . " = " . "$value" . ".id_$typeArray[$key]";
+                    $innerJoinText .= " INNER JOIN " . $value . " ON " . $relArray[0] . ".id_$typeArray[$key]" . "_" . "$typeArray[0]" . " = " . "$value" . ".id_$typeArray[$key]";
                 }
             }
 
-            $sql = "SELECT $select from $relArray[0] $innerJoinText";
+            $sql = "SELECT $select FROM $relArray[0] $innerJoinText";
 
             //Ordenar sin limitar datos
             if ($orderBy != null && $orderMode != null && $startAt == null && $endAt == null) {
@@ -138,11 +138,11 @@ class GetModel
         if (count($relArray) > 1) {
             foreach ($relArray as $key => $value) {
                 if ($key > 0) {
-                    $innerJoinText .= " INNER JOIN " . $value . " ON " . $relArray[0].".id_$typeArray[$key]" . "_" . "$typeArray[0]" . " = " . "$value" . ".id_$typeArray[$key]";
+                    $innerJoinText .= " INNER JOIN " . $value . " ON " . $relArray[0] . ".id_$typeArray[$key]" . "_" . "$typeArray[0]" . " = " . "$value" . ".id_$typeArray[$key]";
                 }
             }
 
-            $sql = "SELECT $select from $relArray[0] $innerJoinText WHERE $linkToArray[0] = :$linkToArray[0] $linkToText";
+            $sql = "SELECT $select FROM $relArray[0] $innerJoinText WHERE $linkToArray[0] = :$linkToArray[0] $linkToText";
 
             //Ordenar sin limitar datos
             if ($orderBy != null && $orderMode != null && $startAt == null && $endAt == null) {
@@ -189,22 +189,22 @@ class GetModel
         }
 
         $sql = "SELECT $select FROM $table WHERE $linkToArray[0] LIKE '%$searchArray[0]%' $linkToText";
-    
+
         //Ordenar sin limitar datos
         if ($orderBy != null && $orderMode != null && $startAt == null && $endAt == null) {
             $sql .= " ORDER BY $orderBy $orderMode";
         }
-    
+
         //Ordenar y limitar datos
         if ($orderBy != null && $orderMode != null && $startAt != null && $endAt != null) {
             $sql .= " ORDER BY $orderBy $orderMode LIMIT :startAt, :endAt";
         }
-    
+
         //Limitar sin ordenar datos
         if ($orderBy == null && $orderMode == null && $startAt != null && $endAt != null) {
             $sql .= " LIMIT :startAt, :endAt";
         }
-    
+
         $stmt = Connection::connect()->prepare($sql);
 
         foreach ($linkToArray as $key => $value) {
@@ -212,7 +212,7 @@ class GetModel
                 $stmt->bindValue(":" . $value, $searchArray[$key], PDO::PARAM_STR);
             }
         }
-    
+
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_CLASS);
     }
@@ -240,40 +240,45 @@ class GetModel
         if (count($relArray) > 1) {
             foreach ($relArray as $key => $value) {
                 if ($key > 0) {
-                    $innerJoinText .= " INNER JOIN " . $value . " ON " . $relArray[0].".id_$typeArray[$key]" . "_" . "$typeArray[0]" . " = " . "$value" . ".id_$typeArray[$key]";
+                    $innerJoinText .= " INNER JOIN " . $value . " ON " . $relArray[0] . ".id_$typeArray[$key]" . "_" . "$typeArray[0]" . " = " . "$value" . ".id_$typeArray[$key]";
                 }
             }
 
-            $sql = "SELECT $select from $relArray[0] $innerJoinText WHERE $linkToArray[0] LIKE '%$searchArray[0]%' $linkToText";
+            $sql = "SELECT $select FROM $relArray[0] $innerJoinText WHERE $linkToArray[0] LIKE '%$searchArray[0]%' $linkToText";
 
-        //Ordenar sin limitar datos
-        if ($orderBy != null && $orderMode != null && $startAt == null && $endAt == null) {
-            $sql .= " ORDER BY $orderBy $orderMode";
-        }
-    
-        //Ordenar y limitar datos
-        if ($orderBy != null && $orderMode != null && $startAt != null && $endAt != null) {
-            $sql .= " ORDER BY $orderBy $orderMode LIMIT :startAt, :endAt";
-        }
-    
-        //Limitar sin ordenar datos
-        if ($orderBy == null && $orderMode == null && $startAt != null && $endAt != null) {
-            $sql .= " LIMIT :startAt, :endAt";
-        }
-    
-        $stmt = Connection::connect()->prepare($sql);
 
-        foreach ($linkToArray as $key => $value) {
-            if ($key > 0) {
-                $stmt->bindValue(":" . $value, $searchArray[$key], PDO::PARAM_STR);
+            //Ordenar sin limitar datos
+            if ($orderBy != null && $orderMode != null && $startAt == null && $endAt == null) {
+                $sql .= " ORDER BY $orderBy $orderMode";
             }
-        }
-    
-        $stmt->execute();
-    
-        return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+            //Ordenar y limitar datos
+            if ($orderBy != null && $orderMode != null && $startAt != null && $endAt != null) {
+                $sql .= " ORDER BY $orderBy $orderMode LIMIT :startAt, :endAt";
+            }
+
+            //Limitar sin ordenar datos
+            if ($orderBy == null && $orderMode == null && $startAt != null && $endAt != null) {
+                $sql .= " LIMIT :startAt, :endAt";
+            }
+
+            $stmt = Connection::connect()->prepare($sql);
+
+            foreach ($linkToArray as $key => $value) {
+                if ($key > 0) {
+                    $stmt->bindValue(":" . $value, $searchArray[$key], PDO::PARAM_STR);
+                }
+            }
+
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
         } else {
             null;
         }
+    }
+
+    static public function getDataRange($betweenIn, $betweenOut, $select, $linkTo, $orderBy, $orderMode, $startAt, $endAt) {
+        
     }
 }

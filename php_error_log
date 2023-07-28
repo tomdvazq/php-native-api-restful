@@ -404,3 +404,45 @@ Stack trace:
 #5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
 #6 {main}
   thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 272
+[28-Jul-2023 22:03:36 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* LIKE '%name%'' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:272
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(272): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(40): GetModel::getRelDataSearch('products,catego...', 'product,categor...', 'relations', '*', 'name_product,id...', 'Guitarra_1', NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(32): GetController::getRelDataSearch('products,catego...', 'product,categor...', 'relations', '*', 'name_product,id...', 'Guitarra_1', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 272
+[28-Jul-2023 22:26:53 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:274
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(274): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(40): GetModel::getRelDataSearch('products,catego...', 'product,categor...', '*', 'name_product,id...', 'Guitarra_1', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(32): GetController::getRelDataSearch('products,catego...', 'product,categor...', '*', 'name_product,id...', 'Guitarra_1', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 274
+[28-Jul-2023 22:30:18 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 270
+[28-Jul-2023 22:30:18 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'clients.id_order_client' in 'on clause' in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:274
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(274): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(40): GetModel::getRelDataSearch('clients,orders', 'client,order', '*', 'name_client,id_...', '', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(32): GetController::getRelDataSearch('clients,orders', 'client,order', '*', 'name_client,id_...', '', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 274
+[28-Jul-2023 22:30:33 Europe/Berlin] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 270
+[28-Jul-2023 22:46:58 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM orders  INNER JOIN products ON orders.id_product_order = products.id_pro...' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:273
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(273): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(40): GetModel::getRelDataSearch('orders,products...', 'order,product,c...', '', 'id_client_order...', '1_1_1', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(32): GetController::getRelDataSearch('orders,products...', 'order,product,c...', '', 'id_client_order...', '1_1_1', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 273
