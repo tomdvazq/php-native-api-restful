@@ -446,3 +446,13 @@ Stack trace:
 #5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
 #6 {main}
   thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 273
+[28-Jul-2023 23:44:24 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'BETWEEN '' AND ''' at line 1 in C:\xampp\htdocs\php_apirest\app\models\GetModel.php:301
+Stack trace:
+#0 C:\xampp\htdocs\php_apirest\app\models\GetModel.php(301): PDOStatement->execute()
+#1 C:\xampp\htdocs\php_apirest\app\controllers\GetController.php(46): GetModel::getDataRange('clients', '', '', '*', '', NULL, NULL, NULL, NULL)
+#2 C:\xampp\htdocs\php_apirest\app\routes\services\GET.php(37): GetController::getDataRange('clients', '', '', '*', '', NULL, NULL, NULL, NULL)
+#3 C:\xampp\htdocs\php_apirest\app\routes\routes.php(23): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php_apirest\app\controllers\RoutesController.php(6): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\php_apirest\index.php(13): RoutesController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\php_apirest\app\models\GetModel.php on line 301

@@ -278,7 +278,27 @@ class GetModel
         }
     }
 
-    static public function getDataRange($betweenIn, $betweenOut, $select, $linkTo, $orderBy, $orderMode, $startAt, $endAt) {
-        
+    static public function getDataRange($table, $betweenIn, $betweenOut, $select, $linkTo, $orderBy, $orderMode, $startAt, $endAt)
+    {
+        $sql = "SELECT $select FROM $table WHERE $linkTo BETWEEN '$betweenIn' AND '$betweenOut'";
+
+        //Ordenar sin limitar datos
+        if ($orderBy != null && $orderMode != null && $startAt == null && $endAt == null) {
+            $sql .= " ORDER BY $orderBy $orderMode";
+        }
+
+        //Ordenar y limitar datos
+        if ($orderBy != null && $orderMode != null && $startAt != null && $endAt != null) {
+            $sql .= " ORDER BY $orderBy $orderMode LIMIT :startAt, :endAt";
+        }
+
+        //Limitar sin ordenar datos
+        if ($orderBy == null && $orderMode == null && $startAt != null && $endAt != null) {
+            $sql .= " LIMIT :startAt, :endAt";
+        }
+
+        $stmt = Connection::connect()->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_CLASS);
     }
 }

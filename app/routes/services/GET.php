@@ -34,7 +34,7 @@ else if (isset($rel) && isset($type) && $table == "relations" && isset($linkTo) 
     $response -> getRelDataSearch($rel, $type, $select, $linkTo, $search, $orderBy, $orderMode, $startAt, $endAt);
 } // Petición GET para seleccionar rangos
 else if (isset($linkTo) && isset($betweenIn) && isset($betweenOut)){
-    $response -> getDataRange($betweenIn, $betweenOut, $select, $linkTo, $orderBy, $orderMode, $startAt, $endAt);
+    $response -> getDataRange($table, $betweenIn, $betweenOut, $select, $linkTo, $orderBy, $orderMode, $startAt, $endAt);
 } // Petición GET sin filtro
 else {
     $response -> getData($table, $select, $orderBy, $orderMode, $startAt, $endAt);
