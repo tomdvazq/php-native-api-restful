@@ -7,7 +7,6 @@ require_once "./app/models/GetModel.php";
 class GetController {
 
     static public function getData($table, $select, $orderBy, $orderMode, $startAt, $endAt) {
-
         $response = GetModel::getData($table, $select, $orderBy, $orderMode, $startAt, $endAt);
         $return = new GetController();
         $return -> fncResponse($response);
